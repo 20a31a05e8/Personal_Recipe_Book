@@ -17,7 +17,7 @@ My Personal Recipe Book is more than just a recipe collection. It's a dynamic pl
 
 ## 🌟 Features
 
-- **📚 Recipe Management:** Add, edit, and delete your recipes with ease.
+-   📚  **Recipe Management:** Add, edit, and delete your recipes with ease.
 - **📂 Category Organization:** Categorize your recipes to keep them well-organized.
 - **🔍 Search Functionality:** Quickly find recipes by name or ingredients.
 - **🖥️ User-Friendly Interface:** A simple and intuitive user interface for a seamless experience.
@@ -55,23 +55,23 @@ My Personal Recipe Book is more than just a recipe collection. It's a dynamic pl
 ## 🤝 Contributing
 We welcome contributions from the community to make My Personal Recipe Book even more amazing. If you'd like to contribute, please follow these guidelines:
 
-Fork the repository to your own GitHub account.
-Create a new branch for your feature or bug fix.
-Make your changes and submit a pull request.
-Follow the code of conduct and coding standards in the project.
-For more details, please read our Contributing Guidelines.
+1. Fork the repository to your own GitHub account.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and submit a pull request.
+4. Follow the code of conduct and coding standards in the project.
+5. For more details, please read our Contributing Guidelines.
 
 ## 💡 Feature Ideas
 Looking for ways to contribute? Here are some feature ideas that you can work on during Hacktoberfest:
 
-🍽️ [Add Your Idea Here]: Have a unique feature in mind? Share your proposal with us!
-👤 Enhance User Profiles: Improve user profiles with more customization options.
-⭐ Recipe Favorites: Allow users to mark recipes as favorites.
-📊 Recipe Sharing Analytics: Provide insights on recipe sharing and engagement.
-🗓️ Recipe Scheduling: Schedule recipes for future publication.
-🧠 AI-Powered Recipe Recommendations: Implement recommendation algorithms based on user preferences.
-🏡 Integration with Cooking Appliances: Connect with smart cooking devices.
-📈 Enhanced Recipe Analytics: Offer analytics for recipe.
+- **🍽️ [Add Your Idea Here]**: Have a unique feature in mind? Share your proposal with us!
+- **👤 Enhance User Profiles**: Improve user profiles with more customization options.
+- **⭐ Recipe Favorites**: Allow users to mark recipes as favorites.
+- **📊 Recipe Sharing Analytics**: Provide insights on recipe sharing and engagement.
+- **🗓️ Recipe Scheduling**: Schedule recipes for future publication.
+- **🧠 AI-Powered Recipe Recommendations**: Implement recommendation algorithms based on user preferences.
+- **🏡 Integration with Cooking Appliances**: Connect with smart cooking devices.
+- **📈 Enhanced Recipe Analytics**: Offer analytics for recipe.
 
 ## 📄 License
 
