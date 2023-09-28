@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>My Recipe Book</title>
+</head>
+<body>
+    <br>
+        
+        <h1 >My Recipe Book</h1>
+        <input type="text" id="search" placeholder="Search my recipes...">
+        <button id="add-recipe">Add Recipe</button>
+    </header>
+    <div id="categories">
+        <label for="category-select">Select Category:</label>
+        <select id="category-select">
+            <option value="All">All</option>
+            <option value="Breakfast">Breakfast</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Dinner">Dinner</option>
+            <option value="Dessert">Dessert</option>
+        </select>
+    </div>
+    <div id="recipe-list"></div>
+
+    <div id="recipe-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add a Recipe</h2>
+            <label for="recipe-name">Recipe Name:</label>
+            <input type="text" id="recipe-name">
+            <label for="recipe-ingredients">Ingredients:</label>
+            <textarea id="recipe-ingredients"></textarea>
+            <label for="recipe-category">Category:</label>
+            <select id="recipe-category">
+                <option value="Breakfast">Breakfast</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
+                <option value="Dessert">Dessert</option>
+            </select>
+            <button id="save-recipe">Save</button>
+            <button id="delete-recipe" style="display: none;">Delete</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
