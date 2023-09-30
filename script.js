@@ -13,11 +13,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Sample data for demonstration
     let myRecipes = [
-        { name: 'Pancakes', ingredients: 'Flour, eggs, milk', category: 'Breakfast' },
-        { name: 'Spaghetti Carbonara', ingredients: 'Pasta, eggs, bacon, cheese', category: 'Dinner' },
-        { name: 'Chocolate Chip Cookies', ingredients: 'Flour, sugar, chocolate chips', category: 'Dessert' },
-        { name: 'Greek Salad', ingredients: 'Cucumber, tomato, feta cheese', category: 'Lunch' },
+        { name: 'Pancakes', ingredients: 'Flour, eggs, milk', category: 'Breakfast', isFavorite: false },
+        { name: 'Spaghetti Carbonara', ingredients: 'Pasta, eggs, bacon, cheese', category: 'Dinner', isFavorite: true },
+        { name: 'Chocolate Chip Cookies', ingredients: 'Flour, sugar, chocolate chips', category: 'Dessert', isFavorite: true },
+        { name: 'Greek Salad', ingredients: 'Cucumber, tomato, feta cheese', category: 'Lunch', isFavorite: false },
     ];
+
+    let favoriteRecipes = JSON.parse(localStorage.getItem('favoriteRecipes')) || [];
 
     // Show the recipe modal
     addRecipeButton.addEventListener('click', function () {
@@ -50,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             alert('Please enter a name, ingredients, and category for the recipe.');
         }
+        saveToLocalStorage();
     });
 
     // Delete a recipe
@@ -79,18 +82,24 @@ document.addEventListener('DOMContentLoaded', function () {
         recipeIngredientsInput.value = selectedRecipe.ingredients;
         recipeCategorySelect.value = selectedRecipe.category;
         deleteRecipeButton.style.display = 'block';
+        saveToLocalStorage();
     }
 
     // Add a new recipe to the list
     function addRecipeToList(recipe, index) {
         const recipeItem = document.createElement('div');
         recipeItem.className = 'recipe';
+    
+        const isFavorite = favoriteRecipes.includes(recipe.name);
+        const starChar = isFavorite ? '⭐' : '☆';
+    
         recipeItem.innerHTML = `
             <h3>${recipe.name}</h3>
             <p>Ingredients: ${recipe.ingredients}</p>
             <p>Category: ${recipe.category}</p>
             <button class="edit" data-index="${index}">Edit</button>
             <button class="delete" data-index="${index}">Delete</button>
+            <span class="star-icon" data-index="${index}">${starChar}</span> 
         `;
         recipeList.appendChild(recipeItem);
 
@@ -109,8 +118,21 @@ document.addEventListener('DOMContentLoaded', function () {
                 updateRecipeList();
             }
         });
-    }
 
+        const favoriteButton = recipeItem.querySelector('.star-icon');
+        favoriteButton.addEventListener('click', function() {
+            if (favoriteRecipes.includes(recipe.name)) {
+                const idx = favoriteRecipes.indexOf(recipe.name);
+                favoriteRecipes.splice(idx, 1);
+                favoriteButton.textContent = '☆'; 
+            } else {
+                favoriteRecipes.push(recipe.name);
+                favoriteButton.textContent = '⭐';  
+            }
+            localStorage.setItem('favoriteRecipes', JSON.stringify(favoriteRecipes));
+        });
+
+    }
     // Function to update the recipe list
     function updateRecipeList(recipes) {
         recipeList.innerHTML = '';
@@ -118,6 +140,15 @@ document.addEventListener('DOMContentLoaded', function () {
         filteredRecipes.forEach((recipe, index) => {
             addRecipeToList(recipe, index);
         });
+    }
+
+    function toggleFavorite(index, starIcon) {
+        myRecipes[index].isFavorite = !myRecipes[index].isFavorite;
+        if (myRecipes[index].isFavorite) {
+            starIcon.classList.add('favorited');
+        } else {
+            starIcon.classList.remove('favorited');
+        }
     }
 
     // Event listener for category select
@@ -134,6 +165,21 @@ document.addEventListener('DOMContentLoaded', function () {
         updateRecipeList(filteredRecipes);
     });
 
-    // Initial display of recipes
+    function saveToLocalStorage() {
+        localStorage.setItem('recipes', JSON.stringify(myRecipes));
+        localStorage.setItem('favoriteRecipes', JSON.stringify(favoriteRecipes)); // Não esqueça de também salvar os favoritos!
+    }
+
+    // Ao carregar a página, verifique se já existem receitas armazenadas no localStorage:
+    const storedRecipes = localStorage.getItem('recipes');
+    if (storedRecipes) {
+        myRecipes = JSON.parse(storedRecipes);
+    }
+    const storedFavorites = localStorage.getItem('favoriteRecipes');
+    if (storedFavorites) {
+        favoriteRecipes = JSON.parse(storedFavorites);
+    }
+
+    // Exibição inicial das receitas:
     updateRecipeList();
 });
