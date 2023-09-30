@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
         { name: 'Greek Salad', ingredients: 'Cucumber, tomato, feta cheese', category: 'Lunch', isFavorite: false },
     ];
 
+    // Retrieve the list of favorite recipes from local storage, or default to an empty array if not present
     let favoriteRecipes = JSON.parse(localStorage.getItem('favoriteRecipes')) || [];
 
     // Show the recipe modal
@@ -122,13 +123,16 @@ document.addEventListener('DOMContentLoaded', function () {
         const favoriteButton = recipeItem.querySelector('.star-icon');
         favoriteButton.addEventListener('click', function() {
             if (favoriteRecipes.includes(recipe.name)) {
+                // If the recipe is already a favorite, remove it from the favorites list
                 const idx = favoriteRecipes.indexOf(recipe.name);
                 favoriteRecipes.splice(idx, 1);
                 favoriteButton.textContent = '☆'; 
             } else {
+                // If the recipe isn't a favorite, add it to the favorites list
                 favoriteRecipes.push(recipe.name);
                 favoriteButton.textContent = '⭐';  
             }
+            // Update the favorite recipes list in the localStorage
             localStorage.setItem('favoriteRecipes', JSON.stringify(favoriteRecipes));
         });
 
