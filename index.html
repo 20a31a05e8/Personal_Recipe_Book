@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>My Recipe Book</title>
+    <style>
+        @media print{
+            body *{
+                display: none;
+            }
+            #recipe-list,#recipe-list *{
+                display: block;
+            }
+            #edit,#print,#star-icon,#delete{
+                display: none;
+            }
+          
+        }
+    </style>
 </head>
 <body>
     <br>
@@ -22,6 +36,8 @@
             <option value="Dinner">Dinner</option>
             <option value="Dessert">Dessert</option>
         </select>
+        <button id="print">Print</button>
+
     </div>
     <div id="recipe-list"></div>
 
