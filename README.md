@@ -65,6 +65,7 @@ We welcome contributions from the community to make My Personal Recipe Book even
 3. Make your changes and submit a pull request.
 4. Follow the code of conduct and coding standards in the project.
 5. For more details, please read our Contributing Guidelines.
+6. Star the repository and shower some love towards the recipe book
 
 ## 💡 Feature Ideas
 Looking for ways to contribute? Here are some feature ideas that you can work on during Hacktoberfest:
@@ -77,6 +78,7 @@ Looking for ways to contribute? Here are some feature ideas that you can work on
 - **🧠 AI-Powered Recipe Recommendations**: Implement recommendation algorithms based on user preferences.
 - **🏡 Integration with Cooking Appliances**: Connect with smart cooking devices.
 - **📈 Enhanced Recipe Analytics**: Offer analytics for recipe.
+you also can work on the other features that are mentioned above after the introduction of the repository.
 
 ## 📄 License
 
