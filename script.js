@@ -90,6 +90,8 @@ document.addEventListener('DOMContentLoaded', function () {
     function addRecipeToList(recipe, index) {
         const recipeItem = document.createElement('div');
         recipeItem.className = 'recipe';
+        recipeItem.id = 'recipe${index}';
+        
     
         const isFavorite = favoriteRecipes.includes(recipe.name);
         const starChar = isFavorite ? '⭐' : '☆';
@@ -98,9 +100,9 @@ document.addEventListener('DOMContentLoaded', function () {
             <h3>${recipe.name}</h3>
             <p>Ingredients: ${recipe.ingredients}</p>
             <p>Category: ${recipe.category}</p>
-            <button class="edit" data-index="${index}">Edit</button>
-            <button class="delete" data-index="${index}">Delete</button>
-            <span class="star-icon" data-index="${index}">${starChar}</span> 
+            <button  class="edit" id="edit" data-index="${index}">Edit</button>
+            <button class="delete" id="delete" data-index="${index}">Delete</button>
+            <span class="star-icon" id="star-icon" data-index="${index}">${starChar}</span> 
         `;
         recipeList.appendChild(recipeItem);
 
@@ -135,8 +137,14 @@ document.addEventListener('DOMContentLoaded', function () {
             // Update the favorite recipes list in the localStorage
             localStorage.setItem('favoriteRecipes', JSON.stringify(favoriteRecipes));
         });
+        
 
     }
+    //printing the receipe
+    const printBtn=document.getElementById('print');
+    printBtn.addEventListener('click',function(){
+        window.print();
+    })
     // Function to update the recipe list
     function updateRecipeList(recipes) {
         recipeList.innerHTML = '';
