@@ -14,6 +14,12 @@ body {
     background: #FF8008;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #FFC837, #FF8008);
     background: linear-gradient(to right, #FFC837, #FF8008);
+    background-color: #4a3535;
+    background-color: #5f4b4b;
+    background-color: #4158D0;
+    background: #3a7dd0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFC837, #FF8008);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #3a3324, #074c7a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     margin: 0;
     padding: 0;
 }
@@ -30,6 +36,10 @@ button {
     background: -webkit-linear-gradient(to right, #243B55, #141E30);
     background: linear-gradient(to right, #243B55, #141E30);
     color: #fff;
+    background: #131415;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    color: rgb(210, 217, 224);
     border: none;
     border-radius: 5px;
 }
@@ -79,6 +89,9 @@ textarea {
     background: #D1913C;
     background: -webkit-linear-gradient(to right, #FFD194, #D1913C);
     background: linear-gradient(to right, #FFD194, #D1913C);
+    background: #a4937c;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFD194, #D1913C);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFD194, #D1913C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border: 1px solid #ddd;
     border-radius: 5px;
     margin: 20px;
@@ -95,6 +108,7 @@ textarea {
 .recipe p {
     font-size: 20px;
     color: #777;
+    color: #8b6868;
 }
 
 /* ---------------footer-------------- */
@@ -135,7 +149,6 @@ p {
 .footer-links li, .footer-contact li {
     margin-bottom: 10px;
 }
-
 .footer-links a, .footer-contact a {
     color: #fff;
     border-bottom: 1px solid transparent;
@@ -185,3 +198,6 @@ p {
 }
 
 a:link { text-decoration: none; }
+h1{
+    color: white;
+}
