@@ -21,6 +21,9 @@ Welcome to the College Canteen Website learning resources! This document provide
 - [FreeCodeCamp](https://www.freecodecamp.org/): FreeCodeCamp offers a free full-stack web development curriculum.
 
 - [Codecademy](https://www.codecademy.com/learn/introduction-to-javascript): Codecademy provides interactive coding lessons on various programming languages including JavaScript.
+- https://web-dev-resources.com/#/ : contains all resources relating to web development
+  
+- https://web.dev/learn/: An interactive tutorial on web development
 
 ## Community Forums
 
