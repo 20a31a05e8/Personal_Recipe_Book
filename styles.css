@@ -1,12 +1,12 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #FFFFFF;
-    background-color: #FFFFFF;
+    background-color: #4a3535;
+    background-color: #5f4b4b;
     background-color: #4158D0;
-    background: #FF8008;  /* fallback for old browsers */
+    background: #3a7dd0;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #FFC837, #FF8008);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FFC837, #FF8008); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #3a3324, #074c7a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     margin: 0;
     padding: 0;
 }
@@ -18,10 +18,10 @@ button {
     margin: 10px;
     padding: 10px 20px;
     cursor: pointer;
-    background: #141E30;  /* fallback for old browsers */
+    background: #131415;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
-    color: #fff;
+    color: rgb(210, 217, 224);
     border: none;
     border-radius: 5px;
 }
@@ -70,7 +70,7 @@ textarea {
 }
 
 .recipe {
-    background: #D1913C;  /* fallback for old browsers */
+    background: #a4937c;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #FFD194, #D1913C);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #FFD194, #D1913C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
@@ -88,7 +88,7 @@ background: linear-gradient(to right, #FFD194, #D1913C); /* W3C, IE 10+/ Edge, F
 }
 
 .recipe p {
-    color: #777;
+    color: #8b6868;
 }
 
 
@@ -107,4 +107,7 @@ background: linear-gradient(to right, #FFD194, #D1913C); /* W3C, IE 10+/ Edge, F
 
 .star-icon.favorited {
     color: yellow;
+}
+h1{
+    color: white;
 }
