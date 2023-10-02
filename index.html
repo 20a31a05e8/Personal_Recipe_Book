@@ -4,14 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Recipe Book</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     <title>My Recipe Room</title>
+    <style>
+        @media print{
+            body *{
+                display: none;
+            }
+            #recipe-list,#recipe-list *{
+                display: block;
+            }
+            #edit,#print,#star-icon,#delete{
+                display: none;
+            }
+
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <h1 class="heading">My Recipe Book</h1>
+        <h1 class="heading">My Recipe Room</h1>
         <input type="text" id="search" placeholder="Search my recipes...">
         <button id="add-recipe">Add Recipe</button>
     </header>
@@ -24,6 +38,7 @@
             <option value="Dinner">Dinner</option>
             <option value="Dessert">Dessert</option>
         </select>
+        <button id="print">Print</button>
     </div>
     <div id="recipe-list"></div>
 
