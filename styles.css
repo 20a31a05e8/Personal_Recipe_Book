@@ -1,8 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", "sans-serif";
+  }
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #FFFFFF;
-    background-color: #FFFFFF;
     background-color: #4158D0;
     background: #FF8008;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #FFC837, #FF8008);  /* Chrome 10-25, Safari 5.1-6 */
@@ -11,7 +16,9 @@ body {
     padding: 0;
 }
 
-  
+.heading{
+    font-size: 5em;
+}
   
 
 button {
@@ -71,8 +78,8 @@ textarea {
 
 .recipe {
     background: #D1913C;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #FFD194, #D1913C);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #FFD194, #D1913C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to right, #FFD194, #D1913C);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFD194, #D1913C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -82,11 +89,106 @@ background: linear-gradient(to right, #FFD194, #D1913C); /* W3C, IE 10+/ Edge, F
 }
 
 .recipe h3 {
-    font-size: 24px;
+    font-size: 30px;
     color: #333;
     margin-bottom: 10px;
 }
 
 .recipe p {
+    font-size: 20px;
     color: #777;
 }
+
+
+
+/* ---------------footer--------------  */
+
+  
+  footer {
+    background-color: #000000ed;
+    color: #fff;
+    padding: 30px 0;
+    font-family: "poppins", "sans-serif";
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-info, .footer-links, .footer-contact {
+    flex: 1;
+    padding: 0 20px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.footer-links ul, .footer-contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li, .footer-contact li {
+    margin-bottom: 10px;
+}
+
+.footer-links a, .footer-contact a {
+    color: #fff;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color 0.2s ease-in-out;
+}
+
+.footer-links i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+
+
+.footer-info {
+    border-right: 1px solid #fff;
+    padding-right: 30px;
+}
+
+.footer-info h2 {
+    color: #fff;
+}
+
+.footer-contact li a,
+.footer-links li a {
+    color: #fff;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom-color 0.2s ease-in-out;
+}
+
+.footer-contact li a:hover,
+.footer-links li a:hover {
+    border-bottom-color: #fff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.footer-bottom a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: #fff;
+}
+
+a:link { text-decoration: none; }
