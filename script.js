@@ -192,6 +192,6 @@ document.addEventListener('DOMContentLoaded', function () {
         favoriteRecipes = JSON.parse(storedFavorites);
     }
 
-    // Exibição inicial das receitas:
+    // display of recipes
     updateRecipeList();
 });
