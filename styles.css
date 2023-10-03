@@ -22,6 +22,7 @@ body {
 
 .heading {
     font-size: 5em;
+    color: white;
 }
 
 button {
@@ -38,6 +39,7 @@ button {
     color: rgb(210, 217, 224);
     border: none;
     border-radius: 5px;
+    transition: background 0.3s ease;
 }
 
 button:hover {
@@ -69,6 +71,7 @@ button:hover {
     cursor: pointer;
     font-size: 24px;
     color: #777;
+    transition: color 0.3s ease;
 }
 
 .close:hover {
@@ -93,6 +96,11 @@ background: linear-gradient(to right, #FFD194, #D1913C); /* W3C, IE 10+/ Edge, F
     margin: 20px;
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+.recipe:hover {
+    background: #ffcc80; /* Lighter background on hover */
 }
 
 .recipe h3 {
