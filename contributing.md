@@ -9,19 +9,25 @@ Before you start contributing, please follow these steps:
 1. Fork the repository.
 
 2. Clone your forked repository to your local machine.
-
-git clone gh repo clone 20a31a05e8/Personal_Recipe_Book
+   ```
+    git clone https://github.com/[YOUR_USER_NAME]/Personal_Recipe_Book.git
+   ```
 
 3. Create a new branch for your contribution.
-
+   ```
+    git checkout -b [name_of_your_new_branch]
+   ```
 
 4. Make your changes and commit them with a descriptive message.
 
 
 5. Push your changes to your branch.
+   ```
+    git push origin [name_of_your_new_branch]
+   ```
 
 
-6. Open a Pull Request on the original repository.
+7. Open a Pull Request on the original repository.
 
 ## Guidelines
 
