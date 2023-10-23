@@ -20,6 +20,55 @@ body {
   padding: 0;
 }
 
+select {
+  max-width: 120px;
+  padding: 3px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  color: #333;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+select:focus {
+  outline: none;
+  border-color: #007bff; /* Customize the color as needed */
+}
+select option {
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+}
+select:hover {
+  border-color: #555;
+}
+
+label[for="recipe-ingredients"] {
+  display: block;
+  text-align: center; /* Center-align the text */
+  margin: 0 auto; /* Center horizontally */
+  padding-top: 10px; /* Adjust the top padding as needed */
+}
+
+label[for="category-select"] {
+  color: white;
+}
+
+input[type="text"],
+textarea {
+  width: 200px;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#search {
+  height: 30px;
+}
+
 .heading {
   font-size: 5em;
   color: white;
